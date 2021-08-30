@@ -1,0 +1,60 @@
+<svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" version="2.0">
+  <style>
+    text { cursor: default; }
+    path { fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; }
+    #x, #o { stroke-width: 4; }
+    #x { stroke: #f00; }
+    #o { stroke: #00f; }
+    g use { stroke-width: 3; }
+    g rect { fill: transparent; }
+    g use { display: none; }
+    g.x use:nth-child(1) { display: block; }
+    g.o use:nth-child(2) { display: block; }
+    g use:nth-child(3) { display: block; }
+    text { font-weight: bold; font-family: "Montserrat", "Open Sans", sans-serif; }
+    #win { display: none; }
+    #win text { display: none; font-size: 11pt; text-anchor: middle; }
+    #win.x { display: block; }
+    #win.o { display: block; }
+    #win.none { display: block; }
+    #win.x text:nth-child(2) { display: block; }
+    #win.o text:nth-child(3) { display: block; }
+    #win.none text:nth-child(4) { display: block; }
+    #win rect { fill: rgba(255, 255, 255, .9); }
+    #replay, #replay rect, #replay text { cursor: pointer; }
+    #replay rect { fill: #eee; stroke: #ccc; stroke-width: 1; }
+    #replay text { display: block; font-size: 5pt }
+  </style>
+
+  <defs>
+    <rect id="g" x="-5" y="-5" width="30" height="30" fill="transparent" />
+    <path id="x" d="M0 0l20 20m0 -20l-20 20" />
+    <path id="o" d="M10 0a10 10 0 1 1 -1 0Z" />
+  </defs>
+
+  <path id="grid" d="M30 3 V87 M60 3 V87 M3 30 H87 M3 60 H87" />
+  <g id="squares">
+  <g id="g00" transform="translate(5 5)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g10" transform="translate(35 5)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g20" transform="translate(65 5)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+
+  <g id="g01" transform="translate(5 35)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g11" transform="translate(35 35)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g21" transform="translate(65 35)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+
+  <g id="g02" transform="translate(5 65)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g12" transform="translate(35 65)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  <g id="g22" transform="translate(65 65)"> <use href="#x" /> <use href="#o" /> <use href="#g" /> </g>
+  </g>
+
+  <g id="win" transform="translate(45 50)">
+    <rect x="-45" y="-20" width="90" height="30" />
+    <text>X Wins!</text>
+    <text>O Wins!</text>
+    <text>No Winner</text>
+    <g id="replay" transform="translate(0 10)">
+      <rect rx="2" x="-15" y="-7" width="30" height="10" />
+      <text>replay</text>
+    </g>
+  </g>
+</svg>

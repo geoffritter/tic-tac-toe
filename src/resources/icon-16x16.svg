@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg" version="2.0">
+    <style>path{fill:none;stroke-width:8;stroke-linecap:round}</style>
+    <path stroke="#00f" d="M25 15a10 10 0 1 1-1 0Z" />
+    <path stroke="#f00" d="M4 4l20 20m0 -20l-20 20" />
+</svg>
